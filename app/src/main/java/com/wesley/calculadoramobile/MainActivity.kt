@@ -12,7 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.wesley.calculadoramobile.ui.theme.CalculadoraMobileTheme
-
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,10 +38,23 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TelaCalculadora(modifier: Modifier = Modifier) {
-    Text(
-        text = "Calculadora Mobile",
+
+    Column(
         modifier = modifier
-    )
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+
+        Text(
+            text = "12 + 8",
+            fontSize = 24.sp
+        )
+
+        Text(
+            text = "20",
+            fontSize = 48.sp
+        )
+    }
 }
 
 @Preview(showBackground = true)
